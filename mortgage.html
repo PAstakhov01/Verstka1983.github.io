@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="./css/inter/inter.css">
+	<link href="./css/daisyui/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="./js/tailwind/tailwind.min.js"></script>
+  <script src="./js/tailwind/tailwind.pugins.min.js"></script>
+  <script src="./js/tailwind//index.global.js"></script>
+	<title>Ипотека</title>
+</head>
+<body class="bg-[#191B1D]">
+<header class="">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-12" aria-label="Global">
+    <div class="flex items-center gap-x-10">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">1983</span>
+        <img class="h-8 w-auto" src="pic/logo.svg" alt="">
+      </a>
+      <div class="hidden lg:flex lg:gap-x-10">
+        <a href="#" class="text-sm font-semibold leading-6 text-white">Недвижимость</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-white">Услуги</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-white">Бонусы</a>
+        <a href="#" class="text-sm font-semibold leading-6 text-white">Акции</a>
+           <a href="#" class="text-sm font-semibold leading-6 text-white">Новости</a>
+              <a href="#" class="text-sm font-semibold leading-6 text-white">О компании</a>
+                 <a href="#" class="text-sm font-semibold leading-6 text-white">Контакты</a>
+      </div>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span class="sr-only">Открыть</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-4">
+      <a href="#" class="text-sm font-semibold leading-6 text-white"> <img src="pic/tg.svg"></a>
+         <a href="#" class="text-sm font-semibold leading-6 text-white"> <img src="pic/vk.svg"></a>
+         <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+  Воронеж
+</button>
+         <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+  Cвязаться
+</button>
+    </div>
+  </nav>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div style="display: none;" class="lg:hidden" role="dialog" aria-modal="true">
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div class="fixed inset-0 z-10"></div>
+    <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto  px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div class="flex items-center justify-between">
+      
+        <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+          <span class="sr-only">Закрыть</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="space-y-2 py-6">
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Недвижимость</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Услуги</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Бонусы</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Акции</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Новости</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">О компании</a>
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Контакты</a>
+          </div>
+          <div class="py-6">
+            <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-500"> <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+  Воронеж
+</button></a>
+  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-500"> <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+  Связаться
+</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Верхний баннер ипотека -->
+<section class="flex items-center justify-center">
+    <div class="max-w-7xl lg:mx-0 w-full mx-6">
+        <div class="bg-[#2C2C2E] text-white p-6 rounded-xl shadow-lg flex flex-col sm:flex-row items-center sm:items-center text-center sm:text-left lg:px-8 lg:mx-8 px-6">
+            <div class="order-2 sm:order-1 flex-1">
+                <h2 class="text-3xl sm:text-2xl font-bold">Ипотека</h2>
+                <p class="mt-2 text-gray-300">Бесплатно поможем подобрать ипотечную программу от 4,5%</p>
+                <button class="mt-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded w-full sm:w-auto">
+                    Подобрать ипотеку
+                </button>
+            </div>
+            <div class="order-1 sm:order-2 w-40 h-40 sm:w-56 sm:h-56 mb-4 sm:mb-0 sm:ml-6"> 
+                <img src="./pic/mortgage.png" alt="Ипотека" class="w-full h-full object-cover rounded-lg">
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<!-- Три простых шага 3 кнопки -->
+<section class=" pt-20"> <!-- Секция 6 -->
+    <div class="mx-auto max-w-7xl  lg:flex lg:items-center lg:justify-between pb-8  px-6  sm:py-15 lg:px-8">
+        <h1 class="text-left text-white md:text-5xl sm:text-4xl text-4xl">
+            <span>Три простых шага к недвижимости мечты</span>
+        </h1>
+    </div> 
+    <div class="grid sm:grid-cols-2 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8  mx-auto max-w-7xl px-6 py-8 sm:py-15  lg:items-center lg:px-8">
+        <div class="col-span-1 p-6 bg-[#2C2C2E]  rounded-lg shadow-sm dark:bg-[#2C2C2E] dark:border-gray-700 ">
+            <!-- <img src="pic/main-1.svg" class="py-1"> -->
+            <div class="flex">
+                <svg width="45" height="48" viewBox="0 0 45 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M38.725 31.4627V8.96269V3.9377C38.725 2.7377 37.75 1.7627 36.55 1.7627H3.175C1.975 1.7627 1 2.7377 1 3.9377V8.96269V31.9127C1 33.1127 1.975 34.0877 3.175 34.0877H26.575" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 8.96289H38.8" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.375 18.9375V29.8125H17.575H22.225H25.225" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M26.4248 27.4875V18.9375" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M29.1996 21.4873L19.8996 12.8623L10.5996 21.4873" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22.3002 23.2129H17.5752V29.8129H22.3002V23.2129Z" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M28.4502 5.5127H30.4002" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M33.5498 5.5127H35.4248" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M34.825 40.0875L40.45 45.7125L43.15 43.0125L37.525 37.3125L43.75 33.1125L24.25 26.8125L30.55 46.2375L34.825 40.0875Z" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1 class="text-5xl ml-auto font-bold" style="color: #787878;">1</h1>
+            </div>
+              
+            <div class="pt-16">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-semibold text-white">Заявка</h5>
+                </a>
+                <p class="mb-3 text-gray-500 font-medium text-sm">Оставьте заявку через сайт. Менеджер перезвонит и уточнит детали</p>
+      
+            </div>
+            
+        </div>
+        <div class="col-span-1 p-6 bg-[#2C2C2E]  rounded-lg shadow-sm dark:bg-[#2C2C2E] dark:border-gray-700 ">
+            <div class="flex">
+                <svg width="36" height="48" viewBox="0 0 36 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.0372 37.8379C18.0372 37.8379 31.2372 27.2629 31.3872 15.0379C31.4622 7.83793 25.6872 1.91293 18.4872 1.76293C11.2122 1.68793 5.28723 7.46293 5.21223 14.7379C5.06223 26.9629 18.0372 37.8379 18.0372 37.8379Z" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22.9122 33.0378L28.7622 33.1128C29.6622 33.1128 30.4872 33.6378 30.8622 34.4628L34.6122 43.0128C35.2872 44.5128 34.1622 46.2378 32.5122 46.2378L3.26217 45.8628C1.61217 45.8628 0.487169 44.0628 1.23717 42.5628L5.21217 34.0878C5.58717 33.2628 6.41217 32.7378 7.31217 32.7378L13.1622 32.8128" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24.4125 13.313V23.513H12.1875V13.313" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M26.9617 15.713L18.3367 7.68799L9.63672 15.713" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.9619 22.0376V16.0376" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.9619 22.0376V16.0376" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.9619 16.0376H15.9619" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h1 class="text-5xl ml-auto font-bold" style="color: #787878;">2</h1>
+            </div>
+            <div class="pt-16">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-semibold text-white">Выбор квартиры</h5>
+                </a>
+                <p class="mb-3 text-gray-500 font-medium text-sm">Выберете квартиру вместе с личным менеджером</p>
+            </div>
+        </div>
+        <div class="col-span-1 sm:col-span-2 md:col-span-1 p-6 bg-[#2C2C2E]  rounded-lg shadow-sm dark:bg-[#2C2C2E] dark:border-gray-700 ">
+            <div class="flex">
+                <svg width="36" height="48" viewBox="0 0 36 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.0372 37.8379C18.0372 37.8379 31.2372 27.2629 31.3872 15.0379C31.4622 7.83793 25.6872 1.91293 18.4872 1.76293C11.2122 1.68793 5.28723 7.46293 5.21223 14.7379C5.06223 26.9629 18.0372 37.8379 18.0372 37.8379Z" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22.9122 33.0378L28.7622 33.1128C29.6622 33.1128 30.4872 33.6378 30.8622 34.4628L34.6122 43.0128C35.2872 44.5128 34.1622 46.2378 32.5122 46.2378L3.26217 45.8628C1.61217 45.8628 0.487169 44.0628 1.23717 42.5628L5.21217 34.0878C5.58717 33.2628 6.41217 32.7378 7.31217 32.7378L13.1622 32.8128" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24.4125 13.313V23.513H12.1875V13.313" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M26.9617 15.713L18.3367 7.68799L9.63672 15.713" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.9619 22.0376V16.0376" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.9619 22.0376V16.0376" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.9619 16.0376H15.9619" stroke="#BF6128" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                    
+                <h1 class="text-5xl ml-auto font-bold" style="color: #787878;">3</h1>
+            </div>
+            <div class="pt-16">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-semibold text-white">Документы</h5>
+                </a>
+                <p class="mb-3 text-gray-500 font-medium text-sm">Заполните документы. Менеджер подаст их сразу в несколько банков</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Калькулятор ипотеки -->
+<section class=""> <!-- Секция 6 -->
+    <div class="text-white flex justify-center items-center py-5  lg:px-8">
+        <div class="w-full max-w-7xl p-10  shadow-lg">
+            <h1 class="text-3xl font-semibold mb-6 text-left text-white">Калькулятор ипотеки</h1>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+                <div>
+                    <label class="block text-sm text-white">Программа</label>
+                    <select class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-white">
+                        <option>Базовая программа</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm text-white">Вид недвижимости</label>
+                    <select class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-white">
+                        <option>Новостройка</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm text-white">Ставка</label>
+                    <input type="text" class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-center text-white" value="13%">
+                </div>
+                <div>
+                    <label class="block text-sm text-white">Срок</label>
+                    <input type="text" class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-center text-white" value="27 лет">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                <div>
+
+                    <label class="block text-sm text-white">Стоимость недвижимости</label>
+                    <input type="number" class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-right text-white" value="1000000">
+                    <input type="range" min="1000000" max="10000000" step="100000" class="w-full mt-2 accent-[#BF6128]">
+                </div>
+                <div>
+                    <label class="block text-sm text-white">Первоначальный взнос</label>
+                    <input type="number" class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-right text-white" value="1000000">
+                    <input type="range" min="1000000" max="5000000" step="100000" class="w-full mt-2 accent-[#BF6128]">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-6">
+                <div class="p-3 bg-[#2C2C2E] text-center text-white border border-gray-600">
+                    <span class="text-sm">Сумма переплаты</span>
+                    <p class="text-lg font-bold">250 000 ₽</p>
+                </div>
+                <div class="p-3 bg-[#2C2C2E] text-center text-white border border-gray-600">
+                    <span class="text-sm">Полная сумма ипотеки</span>
+                    <p class="text-lg font-bold">4 500 000 ₽</p>
+                </div>
+                <div class="p-3 bg-[#2C2C2E] text-center text-white border border-gray-600">
+                    <span class="text-sm">Платёж</span>
+                    <p class="text-lg font-bold">12 152 ₽/мес.</p>
+                </div>
+            </div>
+            <div class="flex justify-center mt-6">
+                <button class=" p-3 bg-orange-500 hover:bg-orange-600 text-white border border-gray-600">Оставить заявку</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Наши партнёры -->
+<section class="flex items-center justify-center">
+    <div class="max-w-7xl lg:mx-0 w-full mx-6">
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 lg:mx-8">
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+            <div class="bg-black text-white p-6 flex items-center justify-center"><img src="pic/sber.svg"></div>
+        </div>
+    </div>
+    
+</section>
+
+<!-- Лучшие условия персонально для вас -->
+<section class="flex items-center justify-center  pt-20  ">
+    <div class="max-w-7xl lg:mx-0 w-full mx-6">
+        <!-- Основной блок для больших экранов -->
+        <div class="hidden sm:grid md:grid-cols-2 grid-cols-1 sm:grid-cols-2 gap-6 bg-[#E3D8C5] px-8 rounded-xl shadow-lg items-center text-left lg:px-8 lg:mx-8 px-6">
+           
+           <!-- Левая часть с текстом -->
+           <div class="flex flex-col justify-center">
+               <h3 style="line-height: 3.3rem;" class="font-semibold text-[32px] sm:text-[42px] md:text-[56px] text-black">
+                    Лучшие условия персонально для вас
+               </h3>
+               <p class="mt-4 text-lg text-black">
+                    Получите бесплатную консультацию по подбору недвижимости
+               </p>
+
+                <!-- Кнопка и соцсети -->
+                <div class="block items-center gap-4 mt-6 ">
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded mb-2 sm:text-1x1  text-5x1">
+                        Получить консультацию
+                    </button>
+                    <div class="flex gap-2 pb-2">
+                        <a href="#"><img src="pic/tg.svg" class="w-8 h-8"></a>
+                        <a href="#"><img src="pic/vk.svg" class="w-8 h-8"></a>
+                    </div>
+                </div>
+           </div>
+
+           <!-- Правая часть с картинкой -->
+           <div class="flex justify-end">
+               <img src="pic/banner-social.png" alt="Дизайн интерьера" class="max-w-[26rem] w-full max-w-md rounded-lg">
+           </div>
+       </div>
+
+       <!-- Мобильная версия (до 640px) -->
+       <div class="sm:hidden flex flex-col bg-[#E3D8C5] p-4 rounded-xl shadow-lg text-center">
+            <img src="pic/banner-social.png" alt="Дизайн интерьера" class="w-full rounded-lg">
+            <h3 class="font-semibold text-xl text-black mt-4">
+                Лучшие условия персонально для вас
+            </h3>
+            <p class="mt-2 text-sm text-black">
+                Получите бесплатную консультацию по подбору недвижимости
+            </p>
+
+            <!-- Кнопка и соцсети -->
+            <div class="flex  items-center gap-3 mt-4 mx-auto">
+                <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded text-xs">
+                    Получить консультацию
+                </button>
+                <div class="flex gap-1">
+                    <a href="#"><img src="pic/tg.svg" class="w-6 h-6"></a>
+                    <a href="#"><img src="pic/vk.svg" class="w-6 h-6"></a>
+                </div>
+            </div>
+       </div>
+    </div>
+</section>
+
+<!-- Вам может понравится квартиры -->
+<section class=""> <!-- Секция 4 с фильтром -->
+
+    <div class="mx-auto max-w-7xl  lg:flex lg:items-center lg:justify-between pb-8  px-6  sm:py-15 lg:px-8">
+        <h1 class="text-left text-white md:text-5xl sm:text-4xl text-4xl">
+            <span>Вам может понравиться</span>
+        </h1>
+    </div> 
+    <div class="grid gap-6 mx-auto max-w-7xl px-6  sm:py-15  lg:items-center grid-cols-1 lg:px-8 sm:grid-cols-2 md:grid-cols-3">
+        <div class="max-w-sm bg-[#2C2C2E] mx-auto">
+            <a href="#">
+                <img class="rounded-t-lg" src="pic/shop.png" alt="" />
+            </a>
+            <div class="p-5  ">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">7 699 167 Р</h5>
+                </a>
+                <p class="mb-3 text-white font-medium text-sm">3-комнатная квартира</p>
+            <div class="flex">
+                <ul class="m-auto">
+                    <li class="text-gray-500 font-medium text-sm">Площадь</li>
+                    <li class="text-white font-medium text-sm">52,56м</li>
+                </ul>
+                <ul class="m-auto">
+                    <li class="text-gray-500 font-medium text-sm">Этаж</li>
+                    <li class="text-white font-medium text-sm">11</li>
+                </ul>
+                <ul class="m-auto">
+                    <li class="text-gray-500 font-medium text-sm">Отделка</li>
+                    <li class="text-white font-medium text-sm">Под ключ</li>
+                </ul>
+            </div>
+            </div>
+            <div class="p-3">
+                <ul>
+                    <li class="mb-3"><div class="flex"><img src="pic/geo.svg" class="px-2"><span class="text-gray-500 font-medium text-sm">Озерки</span></div></li>
+                    <li class="mb-3"><div class="flex"><img src="pic/geo-1.svg" class="px-2"><span class="text-gray-500 font-medium text-sm">Пограничный прд. д 13</span></div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-sm bg-[#2C2C2E] mx-auto">
+            <a href="#">
+                <img class="rounded-t-lg" src="pic/shop.png" alt="" />
+            </a>
+            <div class="p-5  ">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">7 699 167 Р</h5>
+                </a>
+                <p class="mb-3 text-white font-medium text-sm">3-комнатная квартира</p>
+            <div class="flex">
+                <ul class="m-auto">
+                    <li class="text-gray-500 font-medium text-sm">Площадь</li>
+                    <li class="text-white font-medium text-sm">52,56м</li>
+                </ul>
+                <ul class="m-auto">
+                    <li class="text-gray-500 font-medium text-sm">Этаж</li>
+                    <li class="text-white font-medium text-sm">11</li>
+                </ul>
+                <ul class="m-auto">
+                    <li class="text-gray-500 font-medium text-sm">Отделка</li>
+                    <li class="text-white font-medium text-sm">Под ключ</li>
+                </ul>
+            </div>
+            </div>
+            <div class="p-3">
+                <ul>
+                    <li class="mb-3"><div class="flex"><img src="pic/geo.svg" class="px-2"><span class="text-gray-500 font-medium text-sm">Озерки</span></div></li>
+                    <li class="mb-3"><div class="flex"><img src="pic/geo-1.svg" class="px-2"><span class="text-gray-500 font-medium text-sm">Пограничный прд. д 13</span></div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-sm bg-[#2C2C2E] mx-auto">
+            <a href="#">
+                <img class="rounded-t-lg" src="pic/shop.png" alt="" />
+            </a>
+            <div class="p-5  ">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">7 699 167 Р</h5>
+                </a>
+                <p class="mb-3 text-white font-medium text-sm">3-комнатная квартира</p>
+                <div class="flex">
+                    <ul class="m-auto">
+                        <li class="text-gray-500 font-medium text-sm">Площадь</li>
+                        <li class="text-white font-medium text-sm">52,56м</li>
+                    </ul>
+                    <ul class="m-auto">
+                        <li class="text-gray-500 font-medium text-sm">Этаж</li>
+                        <li class="text-white font-medium text-sm">11</li>
+                    </ul>
+                    <ul class="m-auto">
+                        <li class="text-gray-500 font-medium text-sm">Отделка</li>
+                        <li class="text-white font-medium text-sm">Под ключ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="p-3">
+                <ul>
+                    <li class="mb-3"><div class="flex"><img src="pic/geo.svg" class="px-2"><span class="text-gray-500 font-medium text-sm">Озерки</span></div></li>
+                    <li class="mb-3"><div class="flex"><img src="pic/geo-1.svg" class="px-2"><span class="text-gray-500 font-medium text-sm">Пограничный прд. д 13</span></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="m-auto text-center pb-6">
+        <button type="button" class=" bg-[#BF6128] hover:bg-amber-600 text-white font-bold py-4 px-8 border border-amber-700 mb-2">
+            Показать все квартиры
+        </button>
+    </div>
+</section>
+
+<!-- Отзывы клиентов -->
+<section class=""> <!-- секция отзывы -->
+    <div class="mx-auto max-w-7xl  pt-12  lg:flex lg:items-center lg:justify-between sm:px-6  lg:px-5">
+        
+        <h1 class="text-left text-white text-5xl ml-4">
+            <span>Отзывы</span>
+            <span class="text-amber-600">наших клиентов</span>
+        </h1>
+    </div>
+    <div class="flex mx-auto max-w-7xl  pt-5  pb-2 lg:flex lg:items-center lg:justify-between sm:px-6  lg:px-5  ">
+        <ul class="flex ml-4 grid sm:grid-cols-3 grid-cols-2 gap-2 justify-normal">
+            <li class="">
+                <button type="button" class=" inline-flex text-white bg-[#2C2C2E] hover: 
+                    focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium  text-sm px-5 
+                    py-2.5 me2- mb-2 dark:bg-[#2C2C2E] dark:hover:bg-[#2C2C2E] dark:focus:ring-gray-700 dark:border-gray-700
+                    rounded-lg">
+                    <span >Яндекс.Карты</span> 
+                    <span class="text-bold px-1">4.8</span>
+                    <img src="pic/star.svg">
+                </button>
+            </li>
+            <li class="m-auto">
+                <button type="button" class=" inline-flex text-white bg-[#2C2C2E] hover:
+                    focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium  text-sm px-5
+                     py-2.5 me-2 mb-2 dark:bg-[#2C2C2E] dark:hover:bg-[#2C2C2E] dark:focus:ring-gray-700 dark:border-gray-700
+                      rounded-lg">
+                     <span >2Гис</span> 
+                    <span class="text-bold px-1">4.8</span>
+                    <img src="pic/star.svg">
+                </button>
+            </li>
+            <li class="pt-2 sm:px-0  px-5">
+                <a href="#" class="hover:underline text-white ">Все отзывы →</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="w-full max-w-7xl p-6 mt-1 mx-auto text-white">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mx-2">
+            <div class="bg-[#2C2C2E] p-6 rounded-xl shadow-lg">
+                <h3 class="font-bold text-xl">Константин Константинов</h3>
+                <div class="text-orange-400 text-2xl">★★★★★</div>
+                <p class="text-lg text-gray-400">28 октября 2023</p>
+                <p class="text-lg mt-3">Хочу поблагодарить Маргариту за помощь в подборе недвижимости...</p>
+            </div>
+            <div class="bg-[#2C2C2E] p-6 rounded-xl shadow-lg">
+                <h3 class="font-bold text-xl">Константин Константинов</h3>
+                <div class="text-orange-400 text-2xl">★★★★★</div>
+                <p class="text-lg text-gray-400">28 октября 2023</p>
+                <p class="text-lg mt-3">Хочу поблагодарить Маргариту за помощь в подборе недвижимости...</p>
+            </div>
+            <div class="bg-[#2C2C2E] p-6 rounded-xl shadow-lg">
+                <h3 class="font-bold text-xl">Константин Константинов</h3>
+                <div class="text-orange-400 text-2xl">★★★★★</div>
+                <p class="text-lg text-gray-400">28 октября 2023</p>
+                <p class="text-lg mt-3">Хочу поблагодарить Маргариту за помощь в подборе недвижимости...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative overflow-hidden ">
+        <div class="absolute inset-0 mx-auto md:max-w-7xl    md:pb-20 sm:max-w-1xl sm:px-0 sm:py-0 ">
+            <img src="pic/banner-2.png" alt="" class="px-8 h-full w-full object-cover object-center">
+        </div>
+        <div class="relative  bg-opacity-75  my-20 sm:mx-15  lg:mx-40">
+            <div class="relative mx-auto flex  flex-col items-start text-left mx-auto max-w-7xl px-10  sm:pb-30  lg:justify-between lg:px-12">
+                <h2 id="social-impact-heading" class="text-4xl font-bold tracking-tight text-gray-700 sm:text-5xl">
+                    <span class="block sm:inline text-left">Ваше мнение —<br> точка роста<br> для экспертов</span>
+                </h2>
+                <p class="mt-3 text-xl text-gray-700 text-left">Поделитесь впечатлениями о работ с экспертом “1983”. <br>Это поможет нам стать еще лучше</p>
+                <a href="#" class="mt-8 block mx-auto sm:mx-4 sm:w-auto sm:w-[80vw] w-[75vw] rounded-md border border-transparent bg-amber-600 px-8 py-3 text-white font-medium text-white hover:bg-amber-600 text-center">Оставить отзыв</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Опираемся на многолетний опыт -->
+<section class=" pt-12"> <!-- Секция  опыт -->
+	<div class="mx-auto max-w-7xl  lg:flex lg:items-center lg:justify-between pb-8  sm:px-6  lg:px-5">
+        <h1 class="mx-4 text-left text-white  md:text-5xl sm:text-4xl">
+            <span>Опираемся на <span class="text-amber-600">многолетний опыт</span> и глубокое знание рынка</span>
+        </h1>
+    </div> 
+   
+    <div class=" text-white flex  sm:py-6 justify-center items-center max-w-7xl mx-auto">
+        <div class="mx-8 w-full bg-[#2C2C2E] rounded-lg p-6  flex flex-col md:flex-row gap-6 md:items-stretch">
+            <div class="w-full md:w-1/2 flex flex-col justify-center order-2 md:order-1">
+                <h2 class="text-2xl font-bold mb-4">Агентство 1983</h2>
+                <p class="text-white mb-4">
+                    Наша миссия — сделать процесс покупки, продажи или аренды недвижимости максимально простым и комфортным для вас.
+                    Мы тщательно анализируем рынок, чтобы предложить вам самые выгодные решения и всегда готовы ответить на все ваши вопросы.
+                    Мы гордимся нашими ценностями: честность, прозрачность и ответственность. Каждый клиент для нас — это долгосрочное партнёрство,
+                    построенное на доверии и взаимопонимании.
+                </p>
+                <p class="text-white mb-6">
+                    Будь то поиск уютного дома для вашей семьи, инвестирование в коммерческую недвижимость или продажа объекта — мы рядом,
+                    чтобы поддержать и обеспечить вам уверенность в каждом шаге. Доверьте нам заботу о вашей недвижимости, и мы превратим ваши мечты в реальность!
+                </p>
+                <button class="bg-orange-600 text-white px-8 py-4 text-lg rounded-lg hover:bg-orange-700 transition w-full md:w-auto">
+                    Связаться с нами
+                </button>
+            </div>
+            <div class="w-full md:w-1/2 h-64 md:h-auto rounded-lg overflow-hidden order-1 md:order-2">
+                <img src="pic/team.png" alt="Команда агентства" class="w-full h-full object-cover" src="pic/team.png" >
+            </div>
+        </div>
+    </div>
+</section> 
+
+<!-- Новости -->
+<section class=" pt-12">  <!-- Секция новостей -->
+    <div class="mx-auto max-w-7xl  lg:flex lg:items-center lg:justify-between pb-8  px-6  sm:py-15 lg:px-8">
+        <h1 class="text-left text-white md:text-5xl sm:text-4xl text-4xl">
+            <span>Новости</span>
+        </h1>
+    </div>
+    <div class="grid  gap-6  mx-auto max-w-7xl px-6  sm:py-6  lg:items-center lg:px-8 sm:grid-cols-1 md:grid-cols-3">
+        <div class="mb-3 mx-auto">
+            <figure class="relative max-w-sm transition-all duration-300 cursor-pointer">
+                <a href="#">
+                    <img class="rounded-lg" src="pic/news-card.png" alt="image description">
+                </a>
+                <figcaption class="absolute px-4  bottom-6">
+                    <p class="text-white font-medium text-s mb-1">1 сентября 2024</p>
+                    <p class="text-xl text-white mb-3 font-bold">Как купить квартиру<br> от застройщика</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="mb-3 mx-auto">
+            <figure class="relative max-w-sm transition-all duration-300 cursor-pointer">
+                <a href="#">
+                    <img class="rounded-lg" src="pic/news-card.png" alt="image description">
+                </a>
+                <figcaption class="absolute px-4  bottom-6">
+                    <p class="text-white font-medium text-s mb-1">1 сентября 2024</p>
+                    <p class="text-xl text-white mb-3 font-bold">Как купить квартиру<br> от застройщика</p>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="mb-3 mx-auto">
+            <figure class="relative max-w-sm transition-all duration-300 cursor-pointer">
+                <a href="#">
+                    <img class="rounded-lg" src="pic/news-card.png" alt="image description">
+                </a>
+                <figcaption class="absolute px-4  bottom-6">
+                    <p class="text-white font-medium text-s mb-1">1 сентября 2024</p>
+                    <p class="text-xl text-white mb-3 font-bold">Как купить квартиру<br> от застройщика</p>
+                </figcaption>
+            </figure>
+        </div>
+   </div>
+</section>
+
+<!-- Отвечаем на ваши вопросы -->
+<section class=" pt-12"> 
+
+    <div class="mx-auto max-w-7xl  lg:flex lg:items-center lg:justify-between pb-8  sm:px-6  lg:px-5">
+        <h1 class="mx-4 text-left text-white  md:text-5xl sm:text-4xl">
+            <span>Отвечаем на ваши вопросы</span>
+        </h1>
+    </div> 
+	
+    <div class="grid w-full max-w-7xl py-10 px-8  mx-auto">
+        <div class="space-y-2">
+            <div class="bg-[#2C2C2E] p-4 cursor-pointer" onclick="toggleAccordion('faq1')">
+                <div class="flex justify-between items-center">
+                    <span class="text-white">Сколько времени занимает продажа недвижимости?</span>
+                    <span id="faq1-icon" class="text-orange-500 text-2xl">+</span>
+                </div>
+                <div id="faq1" class="hidden mt-2 text-gray-300">
+                    Сроки продажи зависят от множества факторов: расположение, состояние объекта, рыночная конъюнктура и цена. В среднем, при грамотном подходе и профессиональной подготовке объекта к продаже, мы стремимся закрыть сделку в течение 3-6 недель.
+                </div>
+            </div>
+            <div class="bg-[#2C2C2E] p-4 cursor-pointer" onclick="toggleAccordion('faq2')">
+                <div class="flex justify-between items-center">
+                    <span class="text-white">Сколько времени занимает продажа недвижимости?</span>
+                    <span id="faq2-icon" class="text-orange-500 text-2xl">+</span>
+                </div>
+                <div id="faq2" class="hidden mt-2 text-gray-300">
+                    Сроки зависят от множества факторов, включая рыночные условия и состояние недвижимости.
+                </div>
+            </div>
+            <div class="bg-[#2C2C2E] p-4 cursor-pointer" onclick="toggleAccordion('faq3')">
+                <div class="flex justify-between items-center">
+                    <span class="text-white">Сколько времени занимает продажа недвижимости?</span>
+                    <span id="faq3-icon" class="text-orange-500 text-2xl">+</span>
+                </div>
+                <div id="faq3" class="hidden mt-2 text-gray-300">
+                    Продажа может занять от нескольких недель до нескольких месяцев в зависимости от региона и других факторов.
+                </div>
+            </div>
+            <div class="bg-[#2C2C2E] p-4 cursor-pointer" onclick="toggleAccordion('faq4')">
+                <div class="flex justify-between items-center">
+                    <span class="text-white">Сколько времени занимает продажа недвижимости?</span>
+                    <span id="faq4-icon" class="text-orange-500 text-2xl">+</span>
+                </div>
+                <div id="faq4" class="hidden mt-2 text-gray-300">
+                    В среднем продажа недвижимости занимает 3-6 недель при правильном подходе.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="">
+    <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid  gap-4 px-4 py-6 lg:py-8 lg:grid-cols-5 md:grid-cols-3  sm:grid-cols-1 sm:items-center">
+      	    <div class="m-auto md:justify-between text-sm">
+                <h2 class="mb-6 font-semibold text-white"><img src="pic/logo-f.svg"></h2>
+                <ul class="text-gray-300 font-medium text-sm">
+                    <li class="mb-2">
+                        <div class="socials flex gap-2 ">
+                            <a href=""><img src="pic/vk-f.svg"></a>
+                            <a href=""><img src="pic/tg-f.svg"></a>
+                            <a href=""><img src="pic/yt-f.svg"></a>
+                            <a href=""><img src="pic/rt-f.svg"></a>
+                        </div>
+                    </li>
+                    <li class="mb-1 text-sm text-gray-500">
+                        <a href="#" class="hover:none">ООО "Новостройки Воронеж"<br>ИНН7842133445<br>КПП784201001<br>ОГРН1177847150403</a>
+                    </li>
+                
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between  ">
+                <h2 class="mb-3  font-semibold text-white">Недвижимость</h2>
+                <ul class="text-gray-500 font-medium text-sm">
+                    <li class="mb-1">
+                        <a href="#" class=" hover:underline">Новостройкиt</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Вторичная<br>недвижимость</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Загородная<br>недвижимость</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Коммерческая<br>недвижимость</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between  ">
+                <h2 class="mb-3 font-semibold text-white">Услуги</h2>
+                <ul class="text-gray-500 font-medium text-sm">
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Ипотека</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Старое на новоеr</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Готовые бизнесы</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Международная<br>деятельность</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Новостройки москвы</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Отделка и дизайн</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between  ">
+                <h2 class="mb-3  font-semibold text-white">О компании</h2>
+                <ul class="text-white font-medium text-sm">
+                    <li class="mb-3">
+                        <a href="#" class="hover:underline">Контакты</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="hover:underline">Акции и новости</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="hover:underline">Бонусы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between">
+                <h2 class="mb-3  font-semibold text-gray-500">Контакты</h2>
+                <ul class="text-white text-sm">
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline ">+7(473)202-32-33</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline ">info@квартиры36.рф</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline ">ул. Беговая, 63<br>Московский пр-кт, 132</a>
+                    </li>
+                    <li class="mb-3">
+                        <span class="text-sm">Пн-пт: 9:00-20:00<br>Cб: 10:00-17:00<br>Вс: 10:00-16:00</span>
+                    </li>
+                    <li class="mb-3">
+                        <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                            Связаться с нами
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+   
+
+        <div class="px-4 py-6  md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 ">©"Новостройки Воронеж". 2025.
+            </span>
+        </div>
+    </div>
+</footer>
+
+</body> 
+
+<script src="https://cdn.tailwindcss.com"></script>
