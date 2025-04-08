@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" href="./css/inter/inter.css">
+	<link href="./css/daisyui/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="./js/tailwind/tailwind.min.js"></script>
+    <script src="./js/tailwind/tailwind.pugins.min.js"></script>
+    <script src="./js/tailwind/index.global.js"></script>
+    
+	<title>Карточка объекта</title>
+</head>
+<body class="bg-[#191B1D]">
+<!-- Хэдер -->
+<header class="">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-12" aria-label="Global">
+        <div class="flex items-center gap-x-10">
+            <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">1983</span>
+                <img class="h-8 w-auto" src="pic/logo.svg" alt="">
+            </a>
+            <div class="hidden lg:flex lg:gap-x-10">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Недвижимость</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Услуги</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Бонусы</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Акции</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Новости</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">О компании</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Контакты</a>
+            </div>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Открыть</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-4">
+            <a href="#" class="text-sm font-semibold leading-6 text-white"> <img src="pic/tg.svg"></a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white"> <img src="pic/vk.svg"></a>
+            <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                Воронеж
+            </button>
+            <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                Cвязаться
+            </button>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div style="display: none;" class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10"></div>
+        <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto  px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+            
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+                    <span class="sr-only">Закрыть</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Недвижимость</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Услуги</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Бонусы</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Акции</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Новости</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">О компании</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Контакты</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-500"> 
+                            <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                                Воронеж
+                            </button>
+                        </a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-500"> 
+                            <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                                Связаться
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="">
+        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
+                
+                <div class="md:hidden flex flex-col-reverse">
+                <!-- Image selector -->
+                    <div class="mx-auto mt-6 w-full max-w-2xl sm:block lg:max-w-none">
+                        <div class="grid grid-cols-6 gap-3" aria-orientation="horizontal" role="tablist">
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            
+                            <!-- More images... -->
+                        </div>
+                    </div>
+            
+                    <div class="aspect-h-1 aspect-w-1 w-full">
+                        <!-- Tab panel, show/hide based on tab state. -->
+                        <div id="tabs-1-panel-1" aria-labelledby="tabs-1-tab-1" role="tabpanel" tabindex="0">
+                            <img src="./pic/shop.png" alt="Angled front view with bag zipped and handles upright." class="h-full w-full object-cover object-center rounded-lg">
+                        </div>
+                        <!-- More images... -->
+                    </div>
+                </div>
+                <!-- Image gallery -->
+                <div class="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0 bg-[#2C2C2E] rounded-lg">
+                    <div class="px-8 pt-6 pb-4">    
+                        <h1 class="text-2xl font-normal tracking-tight text-white">2-х комнатная квартира</h1>
+                        <h1 class="text-2xl font-normal tracking-tight text-white">3 500 000</h1>
+                    </div>
+
+                    <div class="px-8 pb-4">
+                        <div >
+                            <ul>
+                                <li class=""><div class="flex"><img src="pic/geo.svg" class="py-2 pr-2"><span class="text-gray-500 font-medium text-lg">Заря</span></div></li>
+                            </ul>
+                            <ul>
+                                <li class=""><div class="flex"><img src="pic/geo-1.svg" class="py-2 pr-2"><span class="text-gray-500 font-medium text-lg">Ленинградская ул., д. 29б</span></div></li>
+                            </ul>
+                            <ul>
+                                <li class=""><div class="flex"><img src="pic/geo.svg" class="py-2 pr-2"><span class="text-gray-500 font-medium text-lg">4 квартал 2024</span></div></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+                    <div class="px-8 pb-4">
+                        <div class="grid grid-cols-3 py-3 m-auto ">
+                            <ul class="col-1">
+                                <li class="text-gray-500 font-medium text-md">Общая площадь</li>
+                                <li class="text-white font-normal text-lg">52,56 м²</li>
+                            </ul>
+                            <ul class="col-1">
+                                <li class="text-gray-500 font-medium text-md">Жилая</li>
+                                <li class="text-white font-normal text-lg">31,17 м²</li>
+                            </ul>
+                            <ul class="col-1">
+                                <li class="text-gray-500 font-medium text-md">Кухня</li>
+                                <li class="text-white font-normal text-lg">18,97 м²</li>
+                            </ul>
+                        </div>
+    
+                        <div class="grid grid-cols-3 py-3 m-auto ">
+                            <ul class="col-1">
+                                <li class="text-gray-500 font-medium text-md">Этаж</li>
+                                <li class="text-white font-normal text-lg">11/18</li>
+                            </ul>
+                            <ul class="col-1">
+                                <li class="text-gray-500 font-medium text-md">Лифтов</li>
+                                <li class="text-white font-normal text-lg">1</li>
+                            </ul>
+                            <ul class="col-1">
+                                <li class="text-gray-500 font-medium text-md">Отделка</li>
+                                <li class="text-white font-normal text-lg">Чистовая</li>
+                            </ul>
+                        </div>
+    
+                        <div class="grid grid-cols-3 py-3 m-auto">
+                            <ul class="col-1">
+                                <li class="text-gray-500 font-medium text-md">Балкон</li>
+                                <li class="text-white font-normal text-lg">Лоджия</li>
+                            </ul>
+                            <ul class="col-1">
+                                <li class="text-gray-500 font-medium text-md">Санузел</li>
+                                <li class="text-white font-normal text-lg">2</li>
+                            </ul>
+                            <ul class="col-1">
+                                <li class="text-gray-500 font-medium text-md">Окна</li>
+                                <li class="text-white font-normal text-lg">Во двор</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full justify-center p-6">
+                        <button class="bg-white text-black p-3 flex items-center justify-center w-full my-2 rounded">
+                            <span class="px-3">На карте </span>
+                            <img src="pic/map.svg"/></img>
+                        </button>
+                        <button class="bg-orange-500 text-white p-3 w-full my-2 rounded">Забронировать</button>
+                    </div>
+                    
+                </div>
+                <div class="hidden md:flex flex-col-reverse">
+                <!-- Image selector -->
+                    <div class="flex mx-auto mt-4 w-full max-w-2xl sm:block lg:max-w-none">
+                        <div class="grid grid-cols-6 gap-3" aria-orientation="horizontal" role="tablist">
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <button id="tabs-1-tab-1" class="relative flex h-12 xs:h-16 sm:h-24 cursor-pointer items-center justify-center rounded-md text-sm font-medium uppercase" aria-controls="tabs-1-panel-1" role="tab" type="button">
+                                <span class="sr-only">Angled view</span>
+                                <span class="absolute inset-0 overflow-hidden rounded-md">
+                                    <img src="./pic/shop.png" alt="" class="h-full w-full object-cover object-center">
+                                </span>
+                                <!-- Selected: "ring-indigo-500", Not Selected: "ring-transparent" -->
+                                <span class="pointer-events-none absolute inset-0 rounded-md" aria-hidden="true"></span>
+                            </button>
+                            <!-- More images... -->
+                        </div>
+                    </div>
+            
+                    <div class="aspect-h-[0.9] aspect-w-1 w-full">
+                        <!-- Tab panel, show/hide based on tab state. -->
+                        <div id="tabs-1-panel-1" aria-labelledby="tabs-1-tab-1" role="tabpanel" tabindex="0">
+                            <img src="./pic/shop.png" alt="Angled front view with bag zipped and handles upright." class="h-full w-full object-cover object-center rounded-lg">
+                        </div>
+                        <!-- More images... -->
+                    </div>
+                </div>
+        
+                <!-- Product info -->
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Калькулятор ипотеки -->
+<div class="text-white flex justify-center items-center py-5  lg:px-8">
+    <div class="w-full max-w-7xl p-10  shadow-lg">
+        <h1 class="text-3xl font-semibold mb-6 text-left text-white">Калькулятор ипотеки</h1>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+            <div>
+                <label class="block text-sm text-white">Программа</label>
+                <select class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-white">
+                    <option>Базовая программа</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm text-white">Вид недвижимости</label>
+                <select class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-white">
+                    <option>Новостройка</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm text-white">Ставка</label>
+                <input type="text" class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-center text-white" value="13%">
+            </div>
+            <div>
+                <label class="block text-sm text-white">Срок</label>
+                <input type="text" class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-center text-white" value="27 лет">
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div>
+
+                <label class="block text-sm text-white">Стоимость недвижимости</label>
+                <input type="number" class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-right text-white" value="1000000">
+                <input type="range" min="1000000" max="10000000" step="100000" class="w-full mt-2 accent-[#BF6128]">
+            </div>
+            <div>
+                <label class="block text-sm text-white">Первоначальный взнос</label>
+                <input type="number" class="w-full p-2 mt-1 bg-[#2C2C2E] border border-gray-600 text-right text-white" value="1000000">
+                <input type="range" min="1000000" max="5000000" step="100000" class="w-full mt-2 accent-[#BF6128]">
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-6">
+            <div class="p-3 bg-[#2C2C2E] text-center text-white border border-gray-600">
+                <span class="text-sm">Сумма переплаты</span>
+                <p class="text-lg font-bold">250 000 ₽</p>
+            </div>
+            <div class="p-3 bg-[#2C2C2E] text-center text-white border border-gray-600">
+                <span class="text-sm">Полная сумма ипотеки</span>
+                <p class="text-lg font-bold">4 500 000 ₽</p>
+            </div>
+            <div class="p-3 bg-[#2C2C2E] text-center text-white border border-gray-600">
+                <span class="text-sm">Платёж</span>
+                <p class="text-lg font-bold">12 152 ₽/мес.</p>
+            </div>
+        </div>
+        <div class="flex justify-center mt-6">
+            <button class=" p-3 bg-orange-500 hover:bg-orange-600 text-white border border-gray-600">Оставить заявку</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Футер -->
+
+<footer class="">
+    <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid  gap-4 px-4 py-6 lg:py-8 lg:grid-cols-5 md:grid-cols-3  sm:grid-cols-1 sm:items-center">
+      	    <div class="m-auto md:justify-between text-sm">
+                <h2 class="mb-6 font-semibold text-white"><img src="pic/logo-f.svg"></h2>
+                <ul class="text-gray-300 font-medium text-sm">
+                    <li class="mb-2">
+                        <div class="socials flex gap-2 ">
+                            <a href=""><img src="pic/vk-f.svg"></a>
+                            <a href=""><img src="pic/tg-f.svg"></a>
+                            <a href=""><img src="pic/yt-f.svg"></a>
+                            <a href=""><img src="pic/rt-f.svg"></a>
+                        </div>
+                    </li>
+                    <li class="mb-1 text-sm text-gray-500">
+                        <a href="#" class="hover:none">ООО "Новостройки Воронеж"<br>ИНН7842133445<br>КПП784201001<br>ОГРН1177847150403</a>
+                    </li>
+                
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between  ">
+                <h2 class="mb-3  font-semibold text-white">Недвижимость</h2>
+                <ul class="text-gray-500 font-medium text-sm">
+                    <li class="mb-1">
+                        <a href="#" class=" hover:underline">Новостройкиt</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Вторичная<br>недвижимость</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Загородная<br>недвижимость</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Коммерческая<br>недвижимость</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between  ">
+                <h2 class="mb-3 font-semibold text-white">Услуги</h2>
+                <ul class="text-gray-500 font-medium text-sm">
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Ипотека</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Старое на новоеr</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Готовые бизнесы</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Международная<br>деятельность</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Новостройки москвы</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Отделка и дизайн</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between  ">
+                <h2 class="mb-3  font-semibold text-white">О компании</h2>
+                <ul class="text-white font-medium text-sm">
+                    <li class="mb-3">
+                        <a href="#" class="hover:underline">Контакты</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="hover:underline">Акции и новости</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="hover:underline">Бонусы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between">
+                <h2 class="mb-3  font-semibold text-gray-500">Контакты</h2>
+                <ul class="text-white text-sm">
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline ">+7(473)202-32-33</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline ">info@квартиры36.рф</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline ">ул. Беговая, 63<br>Московский пр-кт, 132</a>
+                    </li>
+                    <li class="mb-3">
+                        <span class="text-sm">Пн-пт: 9:00-20:00<br>Cб: 10:00-17:00<br>Вс: 10:00-16:00</span>
+                    </li>
+                    <li class="mb-3">
+                        <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                            Связаться с нами
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+   
+
+        <div class="px-4 py-6  md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 ">©"Новостройки Воронеж". 2025.
+            </span>
+        </div>
+    </div>
+</footer>
+
+</body> 
+
+<script src="https://cdn.tailwindcss.com"></script>
