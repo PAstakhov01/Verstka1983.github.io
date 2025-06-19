@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="./css/inter/inter.css">
+	<link href="./css/daisyui/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="./js/tailwind/tailwind.min.js"></script>
+  <script src="./js/tailwind/tailwind.pugins.min.js"></script>
+  <script src="./js/tailwind//index.global.js"></script>
+	<title>Инвестиции</title>
+</head>
+<body class="bg-[#1c1c1e]">
+<header class="">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-12" aria-label="Global">
+        <div class="flex items-center gap-x-10">
+            <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">1983</span>
+                <img class="h-8 w-auto" src="pic/logo.svg" alt="">
+            </a>
+            <div class="hidden lg:flex lg:gap-x-10">
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Недвижимость</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Услуги</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Бонусы</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Акции</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Новости</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">О компании</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-white">Контакты</a>
+            </div>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Открыть</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-4">
+            <a href="#" class="text-sm font-semibold leading-6 text-white"> <img src="pic/tg.svg"></a>
+            <a href="#" class="text-sm font-semibold leading-6 text-white"> <img src="pic/vk.svg"></a>
+            <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                Воронеж
+            </button>
+            <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                Cвязаться
+            </button>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div style="display: none;" class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10"></div>
+        <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto  px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+            
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+                    <span class="sr-only">Закрыть</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Недвижимость</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Услуги</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Бонусы</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Акции</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Новости</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">О компании</a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500">Контакты</a>
+                    </div>
+                    <div class="py-6">
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-500"> 
+                            <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                                Воронеж
+                            </button>
+                        </a>
+                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-500"> 
+                            <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                                Связаться
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<section class="bg-[#1c1c1e] text-white py-10 px-4">
+  <div class="max-w-4xl mx-auto space-y-6">
+    <a href="#" class="text-sm text-gray-400 hover:text-white">&larr; Назад</a>
+    
+    <!-- Картинка-->
+    <div class="w-full h-64 md:h-96 bg-gray-700 rounded-xl flex items-center justify-center object-cover">
+      <img src="pic/shop.png" class="w-full h-64 md:h-96"> </img>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Мастер-класс от агентства недвижимости «1984»</h2>
+      <p class="text-sm text-gray-400">10 сентября 2024</p>
+      
+      <p class="text-gray-300">
+        20 февраля в 12:00 при поддержке Центра «Мой бизнес | Воронежская область» Марина Коротова, собственник компании «1984», проведёт мастер-класс на тему: 
+        <span class="italic">«Бизнес на все 100%. Формирование системы бизнеса: продукт-маркетинг-управление. Пассивный доход для начинающих инвесторов»</span>
+      </p>
+
+      <p class="text-gray-300">
+        <strong>Место проведения:</strong> Центр «Мой бизнес», г. Воронеж, ул. Свободы, д. 21
+      </p>
+
+      <div class="text-gray-300">
+        <p class="font-semibold mb-1">Программа:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Упаковка Вашего продукта</li>
+          <li>Построение эффективной системы маркетинга</li>
+          <li>Управление командой</li>
+          <li>Практическая работа в мини-группах</li>
+        </ul>
+      </div>
+
+    </div>
+     <!-- Картинка-->
+    <div class="w-full h-64 md:h-96 bg-gray-700 rounded-xl flex items-center justify-center object-cover">
+      <img src="pic/shop.png" class="w-full h-64 md:h-96"> </img>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl md:text-3xl font-semibold">Мастер-класс от агентства недвижимости «1984»</h2>
+      <p class="text-sm text-gray-400">10 сентября 2024</p>
+      
+      <p class="text-gray-300">
+        20 февраля в 12:00 при поддержке Центра «Мой бизнес | Воронежская область» Марина Коротова, собственник компании «1984», проведёт мастер-класс на тему: 
+        <span class="italic">«Бизнес на все 100%. Формирование системы бизнеса: продукт-маркетинг-управление. Пассивный доход для начинающих инвесторов»</span>
+      </p>
+
+      <p class="text-gray-300">
+        <strong>Место проведения:</strong> Центр «Мой бизнес», г. Воронеж, ул. Свободы, д. 21
+      </p>
+
+      <div class="text-gray-300">
+        <p class="font-semibold mb-1">Программа:</p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Упаковка Вашего продукта</li>
+          <li>Построение эффективной системы маркетинга</li>
+          <li>Управление командой</li>
+          <li>Практическая работа в мини-группах</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="flex items-center justify-center">
+    <div class="max-w-4xl mx-auto  lg:mx-0 w-full">
+        <div class="bg-[#2C2C2E] text-white p-4 rounded-xl shadow-lg flex flex-col sm:flex-row items-center sm:items-center text-center sm:text-left lg:px-8 lg:mx-8 px-6 mx-6 sm:h-[228px] md:h-[328px] ">
+            <div class="order-2 sm:order-1 flex-1">
+                <h2 class="text-2xl sm:text-xl font-bold">Больше новостей в наших соцсетях</h2>
+                <p class="mt-2 text-gray-300">Делимся новостями компании и рынка, рассказываем, как подбираем недвижимость и делаем жизнь наших клиентов лучше</p>
+               <div class="flex  py-6 m-auto justify-center sm:justify-start order-1 sm:order-2">
+                   <button class="bg-[#BF6128]  p-2 mx-1 rounded-lg"><a href=""><img src="pic/vk-n.svg"></a></button>
+                    <button class="bg-[#BF6128] p-2 mx-1 rounded-lg"><a href=""><img src="pic/tg-n.svg"></a></button>
+                    <button class="bg-[#BF6128] p-2 mx-1 rounded-lg"><a href=""><img src="pic/yt-n.svg"></a></button>
+                    <button class="bg-[#BF6128] p-2 mx-1 rounded-lg"><a href=""><img src="pic/r-n.svg"></a></button>
+               </div>
+            </div>
+            <div class="order-1 sm:order-2 w-40 h-40 sm:w-56 sm:h-56 mb-4 sm:mb-0 sm:ml-6">
+                <img src="pic/nc1.svg" alt="Ипотека" class="w-full h-full object-cover rounded-lg">
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<footer class="bg-gray-900">
+    <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid  gap-4 px-4 py-6 lg:py-8 lg:grid-cols-5 md:grid-cols-3  sm:grid-cols-1 sm:items-center">
+      	    <div class="m-auto md:justify-between text-sm">
+                <h2 class="mb-6 font-semibold text-white"><img src="pic/logo-f.svg"></h2>
+                <ul class="text-gray-300 font-medium text-sm">
+                    <li class="mb-2">
+                        <div class="socials flex gap-2 ">
+                            <a href=""><img src="pic/vk-f.svg"></a>
+                            <a href=""><img src="pic/tg-f.svg"></a>
+                            <a href=""><img src="pic/yt-f.svg"></a>
+                            <a href=""><img src="pic/rt-f.svg"></a>
+                        </div>
+                    </li>
+                    <li class="mb-1 text-sm text-gray-500">
+                        <a href="#" class="hover:none">ООО "Новостройки Воронеж"<br>ИНН7842133445<br>КПП784201001<br>ОГРН1177847150403</a>
+                    </li>
+                
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between  ">
+                <h2 class="mb-3  font-semibold text-white">Недвижимость</h2>
+                <ul class="text-gray-500 font-medium text-sm">
+                    <li class="mb-1">
+                        <a href="#" class=" hover:underline">Новостройкиt</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Вторичная<br>недвижимость</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Загородная<br>недвижимость</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Коммерческая<br>недвижимость</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between  ">
+                <h2 class="mb-3 font-semibold text-white">Услуги</h2>
+                <ul class="text-gray-500 font-medium text-sm">
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Ипотека</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Старое на новоеr</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Готовые бизнесы</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Международная<br>деятельность</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Новостройки москвы</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline">Отделка и дизайн</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between  ">
+                <h2 class="mb-3  font-semibold text-white">О компании</h2>
+                <ul class="text-white font-medium text-sm">
+                    <li class="mb-3">
+                        <a href="#" class="hover:underline">Контакты</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="hover:underline">Акции и новости</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#" class="hover:underline">Бонусы</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="m-auto md:justify-between">
+                <h2 class="mb-3  font-semibold text-gray-500">Контакты</h2>
+                <ul class="text-white text-sm">
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline ">+7(473)202-32-33</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline ">info@квартиры36.рф</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="#" class="hover:underline ">ул. Беговая, 63<br>Московский пр-кт, 132</a>
+                    </li>
+                    <li class="mb-3">
+                        <span class="text-sm">Пн-пт: 9:00-20:00<br>Cб: 10:00-17:00<br>Вс: 10:00-16:00</span>
+                    </li>
+                    <li class="mb-3">
+                        <button class="bg-amber-600 hover:bg-amber-600 text-white font-bold py-2 px-4 border border-amber-700 rounded">
+                            Связаться с нами
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+   
+
+        <div class="px-4 py-6 bg-gray-900 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-gray-500 ">©"Новостройки Воронеж". 2025.
+            </span>
+        </div>
+    </div>
+</footer>
+
+</body> 
+
+<script src="https://cdn.tailwindcss.com"></script>
